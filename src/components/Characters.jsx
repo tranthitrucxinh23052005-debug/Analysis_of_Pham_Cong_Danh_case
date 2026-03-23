@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const characters = [
   {
     name: "Phạm Công Danh",
-    role: "Nguyên Chủ tịch HĐQT VNCB'",
+    role: "Nguyên Chủ tịch HĐQT VNCB",
     desc: "Chủ mưu trong vụ án gây thiệt hại hơn 9.000 tỷ đồng tại VNCB. Bị cáo đã chỉ đạo lập hồ sơ khống, dùng tiền ngân hàng bảo lãnh cho các công ty sân sau vay vốn trái phép, dẫn đến mất khả năng thu hồi tài sản.",
     img: "https://tse4.mm.bing.net/th/id/OIP.nKCknNP0T3_NIjupCxgGIAHaF6?rs=1&pid=ImgDetMain&o=7&rm=3"
   },
@@ -28,7 +28,7 @@ const characters = [
   {
     name: "Hứa Thị Phấn",
     role: "Nguyên Cố vấn cấp cao TrustBank",
-    desc: "Nguyên Cố vấn cấp cao TrustBank.",
+    desc: "Thao túng và chi phối toàn bộ hoạt động của TrustBank (tiền thân của VNCB). Bà đã chỉ đạo lập hồ sơ khống, sử dụng các công ty “sân sau” để vay vốn trái quy định, rút tiền ngân hàng phục vụ lợi ích cá nhân..",
     img: "https://tse1.mm.bing.net/th/id/OIP.DcFOYhOvC6ABni6piYcRPgHaEm?rs=1&pid=ImgDetMain&o=7&rm=3"
   }
 ];
@@ -45,7 +45,7 @@ export default function Characters() {
           transition={{ duration: 0.5 }}
           className="text-4xl md:text-5xl font-bold text-[#F075AE] mb-4 drop-shadow-[0_0_6px_#FFAAB8]"
         >
-          Dàn Cast Quyền Lực
+          NHỮNG BÀN TAY VÀNG TRONG BÓNG TỐI
         </motion.h2>
         
         <motion.p 
@@ -55,7 +55,7 @@ export default function Characters() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="text-[#555] mb-12 text-lg md:text-xl font-medium"
         >
-          Ngắm nhìn những "tấm gương sáng" trong làng thao túng tâm lý và hệ thống ngân hàng!
+          Những mắt xích quyền lực trong các đại án tài chính ngân hàng
         </motion.p>
 
         {/* Chỉnh lại grid: tự động co giãn đẹp mắt với 5 items */}

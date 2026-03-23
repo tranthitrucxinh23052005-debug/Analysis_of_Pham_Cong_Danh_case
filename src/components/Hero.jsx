@@ -14,25 +14,17 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="text-5xl md:text-7xl font-bold text-[#F075AE] drop-shadow-[0_0_10px_#FFAAB8] mb-6 z-10"
       >
-        Hệ Lụy Ngàn Tỷ: Nhìn Lại Đại Án VNCB
+        Hệ Lụy Nghìn Tỷ: Nhìn Lại Đại Án VNCB
       </motion.h1>
 
-      <motion.p 
+    <motion.p 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        className="text-xl md:text-2xl text-[#555] max-w-2xl mb-10 z-10"
+        className="text-justify text-2xl md:text-4xl text-[#555] max-w-5xl mx-auto mb-10 z-10 leading-relaxed px-4" 
       >
-        Khám phá bức tranh toàn cảnh về sai phạm quản trị, thao túng tài chính và những bài học pháp lý đắt giá từ vụ án Phạm Công Danh & đồng phạm.
+        Khám phá bức tranh toàn cảnh về sai phạm quản trị, thao túng tài chính và những bài học pháp lý đắt giá từ vụ án Phạm Công Danh & <span className="whitespace-nowrap">đồng phạm.</span>
       </motion.p>
-
-      <motion.button 
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        className="px-8 py-3 bg-[#F075AE] text-white font-bold rounded-full shadow-[0_0_15px_#FFAAB8] hover:bg-[#FFAAB8] transition z-10"
-      >
-        Lướt xuống để tìm hiểu 🔻
-      </motion.button>
       
     </section>
   )

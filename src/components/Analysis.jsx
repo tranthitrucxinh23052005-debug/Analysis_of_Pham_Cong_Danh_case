@@ -1,97 +1,83 @@
 import { motion } from 'framer-motion';
 
 export default function Analysis() {
+  // Đưa dữ liệu vào mảng để code sạch sẽ và dễ quản lý hơn
+  const scenarios = [
+    {
+      id: "1",
+      title: "System Takeover (DB Manipulation)",
+      desc: "Can thiệp cơ sở dữ liệu để chỉnh sửa số dư/trạng thái tài sản thế chấp mà không qua giao diện UI. Giao dịch hợp lệ trên hệ thống nhưng thực tế không có dòng tiền.",
+      icon: "💻",
+      color: "border-[#4FA8FB]"
+    },
+    {
+      id: "2",
+      title: "Logic Flaw (Race Condition)",
+      desc: "Lợi dụng lỗi thiết kế (Security by Design). Thực hiện hàng loạt giao dịch rút tiền nhỏ cùng lúc để hệ thống giải ngân xong trước khi kịp cập nhật số dư âm.",
+      icon: "⚙️",
+      color: "border-[#F075AE]"
+    },
+    {
+      id: "3",
+      title: "Social Engineering cấp cao",
+      desc: "Dùng áp lực/uy tín để mượn tài khoản/token xác thực của cấp dưới. \"Superuser\" mượn danh tính để đổ lỗi cho chủ tài khoản trên nhật ký (Logs).",
+      icon: "🎭",
+      color: "border-[#A8DF8E]"
+    },
+    {
+      id: "4",
+      title: "Third-party Risk (Bên thứ 3)",
+      desc: "Thông đồng để can thiệp hệ thống của đơn vị định giá tài sản hoặc công chứng, khiến ngân hàng giải ngân dựa trên dữ liệu đã bị làm sai lệch từ nguồn.",
+      icon: "🤝",
+      color: "border-[#FFB26B]"
+    }
+  ];
+
   return (
     <section className="py-20 px-4 md:px-8 bg-[#F0FFDF]/50">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Tiêu đề Section */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-[#F075AE] mb-4">Góc Nhìn Chuyên Gia</h2>
-          <p className="text-[#555] italic text-lg">Phân tích lỗ hổng quản trị và bảo mật hệ thống (Cyber Security Perspective)</p>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#F075AE] mb-4">Những Rủi Ro Tiềm Tàng</h2>
+          <p className="text-[#555] italic text-lg">Phân tích chuyên sâu 4 phương thức tấn công giả định (Cyber Security Perspective)</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
-          {/* Cột 1: Mô hình CIA & Lỗ hổng kỹ thuật */}
-          <motion.div 
-            whileHover={{ y: -5 }}
-            className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#F075AE]"
-          >
-            <h3 className="text-xl font-bold mb-6 flex items-center">
-              <span className="mr-2">🛡️</span> Mô hình CIA & Quyền hạn
-            </h3>
-            <div className="space-y-6 text-sm text-[#444] leading-relaxed">
-              <p><strong>Integrity (Tính toàn vẹn):</strong> Bị đánh trực diện khi các lệnh chi bị giả mạo, dữ liệu kế toán không phản ánh đúng thực tế dòng tiền.</p>
-              <p><strong>Non-repudiation (Chống chối bỏ):</strong> Thất bại hoàn toàn do thiếu Digital Signature (Chữ ký số). Thủ phạm có thể ghi đè quy trình mà không để lại định danh số chuẩn xác.</p>
-              <div className="bg-[#FFD8DF]/30 p-4 rounded-xl">
-                <p className="font-bold text-[#F075AE]">Privilege Escalation:</p>
-                <p className="text-xs italic">Lãnh đạo cấp cao tự cấp quyền "ngoại lệ" để bỏ qua xác thực đa nhân tố (MFA).</p>
+        {/* Layout 4 Cột ngang nhau */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {scenarios.map((item, index) => (
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.15, duration: 0.5 }} // Hiệu ứng hiện ra lần lượt từng thẻ
+              whileHover={{ y: -10 }}
+              className={`bg-white p-6 rounded-3xl shadow-xl border-t-8 ${item.color} flex flex-col h-full`}
+            >
+              {/* Icon */}
+              <div className="text-4xl mb-4 bg-gray-50 w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm">
+                {item.icon}
               </div>
-            </div>
-          </motion.div>
-
-          {/* Cột 2: Các kịch bản tấn công giả định */}
-          <motion.div 
-            whileHover={{ y: -5 }}
-            className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#4FA8FB]"
-          >
-            <h3 className="text-xl font-bold mb-6 flex items-center">
-              <span className="mr-2">🕵️‍♂️</span> Kịch bản rủi ro hệ thống
-            </h3>
-            <div className="space-y-4 text-sm text-[#444]">
-              <div className="border-b pb-2">
-                <span className="font-bold text-[#4FA8FB]">Database Manipulation:</span>
-                <p>Can thiệp trực tiếp vào DB để sửa số dư mà không qua UI phần mềm.</p>
-              </div>
-              <div className="border-b pb-2">
-                <span className="font-bold text-[#4FA8FB]">Logic Flaw (Race Condition):</span>
-                <p>Tận dụng độ trễ cập nhật số dư để giải ngân khống hàng loạt.</p>
-              </div>
-              <div className="border-b pb-2">
-                <span className="font-bold text-[#4FA8FB]">Social Engineering:</span>
-                <p>Lạm dụng "uy tín" để mượn Token/Account của kiểm soát viên.</p>
-              </div>
-              <div>
-                <span className="font-bold text-[#4FA8FB]">Third-party Risk:</span>
-                <p>Thông đồng làm sai lệch dữ liệu từ đơn vị định giá bên ngoài.</p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Cột 3: Giải pháp phòng ngừa hiện đại */}
-          <motion.div 
-            whileHover={{ y: -5 }}
-            className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#A8DF8E]"
-          >
-            <h3 className="text-xl font-bold mb-6 flex items-center">
-              <span className="mr-2">🚀</span> Khắc phục bằng Công nghệ
-            </h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="bg-[#A8DF8E] text-white p-1 rounded">✔</div>
-                <p className="text-sm"><strong>Blockchain Audit Logs:</strong> Lưu trữ lịch sử giao dịch không thể tẩy xóa.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="bg-[#A8DF8E] text-white p-1 rounded">✔</div>
-                <p className="text-sm"><strong>AI Monitoring:</strong> Phát hiện bất thường (Anomaly Detection) trong dòng tiền nghìn tỷ.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="bg-[#A8DF8E] text-white p-1 rounded">✔</div>
-                <p className="text-sm"><strong>Biometric MFA:</strong> Áp dụng QĐ 2345 để xác thực khuôn mặt cho mọi giao dịch lớn.</p>
-              </div>
-              <div className="mt-6 p-4 bg-[#F0FFDF] rounded-2xl border border-[#A8DF8E]">
-                <p className="text-[10px] font-bold text-center uppercase tracking-widest text-[#555]">Tiêu chuẩn áp dụng</p>
-                <p className="text-center font-black text-[#1a1a1a]">BASEL II & PKI SYSTEM</p>
-              </div>
-            </div>
-          </motion.div>
-
+              
+              {/* Tiêu đề thẻ */}
+              <h3 className={`text-lg font-black mb-3 leading-snug text-gray-800`}>
+                <span className="text-gray-400 mr-1">{item.id}.</span> <br/>
+                {item.title}
+              </h3>
+              
+              {/* Nội dung chi tiết */}
+              <p className="text-sm text-[#666] leading-relaxed flex-grow text-justify">
+                {item.desc}
+              </p>
+            </motion.div>
+          ))}
         </div>
 
-        {/* Bảng thiệt hại kinh tế */}
+        {/* Bảng thống kê thiệt hại (Vẫn giữ nguyên cho phần chốt hạ) */}
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -112,6 +98,7 @@ export default function Analysis() {
             ))}
           </div>
         </motion.div>
+
       </div>
     </section>
   );

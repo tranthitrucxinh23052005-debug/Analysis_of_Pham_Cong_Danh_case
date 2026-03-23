@@ -42,7 +42,7 @@ export default function Laws() {
           whileInView={{ opacity: 1, scale: 1 }}
           className="text-3xl md:text-4xl font-bold text-[#F075AE] mb-12 text-center drop-shadow-[0_0_5px_#FFAAB8]"
         >
-          Thư Viện Pháp Luật "Né Ô Nhập Kho"
+          Một Số Điều Luật Cần Biết
         </motion.h2>
 
         <div className="flex flex-nowrap overflow-x-auto gap-6 pb-8 snap-x no-scrollbar">

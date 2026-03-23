@@ -14,7 +14,7 @@ const actions = [
   },
   {
     title: "Hợp đồng khống 'Nâng cấp hệ thống CoreBanking'",
-    desc: "Chi 63 tỷ đồng cho các dự án phần mềm ảo để rút tiền mặt phục vụ mục đích cá nhân.",
+    desc: "Nâng khống giá trị đề án Core Banking chiếm đoạt 63 tỷ đồng.",
     icon: "🦊"
   },
   {

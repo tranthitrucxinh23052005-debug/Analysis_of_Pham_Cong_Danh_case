@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { ExternalLink } from 'lucide-react';
 
 const comparisons = [
   {
@@ -28,7 +29,8 @@ const evolutionLaws = [
     v2024: "Giảm còn 10% (Điều 63)",
     impact: "Ngăn tập đoàn phi tài chính chi phối hệ thống.",
     risk: "Pha loãng quyền lực nhóm lợi ích.",
-    icon: "🏢"
+    icon: "🏢",
+    link: "https://thuvienphapluat.vn/van-ban/Tien-te-Ngan-hang/Luat-Cac-to-chuc-tin-dung-32-2024-QH15-577203.aspx#dieu_63"
   },
   {
     criteria: "Sở hữu Nhóm liên quan",
@@ -36,7 +38,8 @@ const evolutionLaws = [
     v2024: "Giảm còn 15% (Điều 63)",
     impact: "Phá vỡ cấu trúc 'gia đình trị' thao túng HĐQT.",
     risk: "Mở rộng định nghĩa người thân (cha dượng, mẹ kế...).",
-    icon: "👨‍👩‍👧‍👦"
+    icon: "👨‍👩‍👧‍👦",
+    link: "https://thuvienphapluat.vn/van-ban/Tien-te-Ngan-hang/Luat-Cac-to-chuc-tin-dung-32-2024-QH15-577203.aspx#dieu_63"
   },
   {
     criteria: "Minh bạch Cổ đông",
@@ -44,7 +47,8 @@ const evolutionLaws = [
     v2024: "Công khai từ 1% (Điều 49)",
     impact: "Xóa bỏ 'bức màn vô hình' của cổ đông đứng tên hộ.",
     risk: "Nâng cao kỷ luật thị trường (Trụ cột 3 Basel).",
-    icon: "👁️"
+    icon: "👁️",
+    link: "https://thuvienphapluat.vn/van-ban/Tien-te-Ngan-hang/Luat-Cac-to-chuc-tin-dung-32-2024-QH15-577203.aspx#dieu_49"
   },
   {
     criteria: "Hạn mức Tín dụng",
@@ -52,7 +56,8 @@ const evolutionLaws = [
     v2024: "Lộ trình giảm về 10% (2029)",
     impact: "Ngăn rủi ro tập trung (Concentration Risk).",
     risk: "Ép doanh nghiệp đa dạng hóa nguồn vốn.",
-    icon: "📉"
+    icon: "📉",
+    link: "https://thuvienphapluat.vn/van-ban/Tien-te-Ngan-hang/Luat-Cac-to-chuc-tin-dung-32-2024-QH15-577203.aspx#dieu_136"
   },
   {
     criteria: "Bancassurance",
@@ -60,7 +65,8 @@ const evolutionLaws = [
     v2024: "Cấm tuyệt đối (Điều 15)",
     impact: "Lành mạnh hóa hành vi kinh doanh (Conduct Risk).",
     risk: "Bảo vệ quyền lợi người tiêu dùng tài chính.",
-    icon: "🛡️"
+    icon: "🛡️",
+    link: "https://thuvienphapluat.vn/van-ban/Tien-te-Ngan-hang/Luat-Cac-to-chuc-tin-dung-32-2024-QH15-577203.aspx#dieu_15"
   },
   {
     criteria: "Can thiệp sớm",
@@ -68,7 +74,8 @@ const evolutionLaws = [
     v2024: "Kích hoạt khi lỗ > 15% vốn",
     impact: "Giám sát dự phòng trước khi mất thanh khoản.",
     risk: "Xử lý rút tiền hàng loạt (Bank run) kịp thời.",
-    icon: "🚨"
+    icon: "🚨",
+    link: "https://thuvienphapluat.vn/van-ban/Tien-te-Ngan-hang/Luat-Cac-to-chuc-tin-dung-32-2024-QH15-577203.aspx#dieu_157"
   }
 ];
 
@@ -109,7 +116,7 @@ export default function Compare() {
           </div>
         </motion.div>
 
-        {/* Bảng 2: Tiến hóa Luật Các TCTD (Siêu chi tiết 2024) */}
+        {/* Bảng 2: Tiến hóa Luật Các TCTD (Giao diện chuẩn - Nội dung từ Team HUB) */}
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black text-[#4FA8FB] uppercase tracking-tighter">
@@ -126,6 +133,7 @@ export default function Compare() {
                   <th className="p-6">Luật cũ (2010-2017)</th>
                   <th className="p-6">Luật mới (2024)</th>
                   <th className="p-6">Phân tích Tác động</th>
+                  <th className="p-6 text-center">Trích dẫn</th> {/* Giữ cột Trích dẫn */}
                 </tr>
               </thead>
               <tbody>
@@ -143,20 +151,30 @@ export default function Compare() {
                       <p className="text-[#1a1a1a] font-semibold text-xs mb-1">{item.impact}</p>
                       <p className="text-[#555] text-[10px] italic leading-tight">{item.risk}</p>
                     </td>
+                    <td className="p-6 text-center">
+                      <a 
+                        href={item.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center p-2 bg-[#4FA8FB]/10 text-[#4FA8FB] rounded-lg hover:bg-[#4FA8FB] hover:text-white transition-all group"
+                        title="Xem văn bản luật gốc trên Thư viện Pháp luật"
+                      >
+                        <ExternalLink size={18} />
+                      </a>
+                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
           
-          {/* Footer ghi chú về Chuyển tiếp (Grandfathering Clause) */}
+          {/* Footer ghi chú giữ nguyên */}
           <div className="mt-8 p-6 bg-[#AEDEFC]/30 rounded-2xl border border-[#4FA8FB]/20">
             <p className="text-xs text-[#555] leading-relaxed">
               <span className="font-bold text-[#4FA8FB]">💡 Lưu ý về Quy định Chuyển tiếp (Grandfathering Clause):</span> Luật 2024 cho phép các cổ đông đang vi phạm tỷ lệ sở hữu tại ngày 01/07/2024 được duy trì số cổ phần hiện có nhưng tuyệt đối cấm tăng thêm (Điều 210), nhằm đảm bảo ổn định thị trường chứng khoán và tránh sốc thanh khoản vĩ mô.
             </p>
           </div>
         </motion.div>
-
       </div>
     </section>
   )

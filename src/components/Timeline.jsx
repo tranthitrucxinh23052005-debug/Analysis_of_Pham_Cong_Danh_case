@@ -12,8 +12,8 @@ const events = [
     desc: "Triển khai hàng loạt phương án tái cơ cấu 'ảo', thực chất là dùng tiền huy động mới để trả nợ cũ và chi tiêu sai mục đích."
   },
   {
-    year: "2014 và 7/2014",
-    title: "Bị phát hiện hành vi sai phạm",
+    year: "2014",
+    title: "Hành vi sai phạm bị phát hiện",
     desc: "Ngân hàng Nhà nước đặt VNCB vào tình trạng kiểm soát đặc biệt. Tháng 7/2014, dàn lãnh đạo chủ chốt bị bắt giữ."
   },
   {

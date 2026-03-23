@@ -31,7 +31,7 @@ export default function RelatedCases() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-black text-[#1a1a1a] uppercase">
-            Hệ Hệ Sinh Thái <span className="text-[#F075AE]">Sai Phạm</span>
+            Các Sai Phạm <span className="text-[#F075AE]">Tương Tự</span>
           </h2>
           <p className="text-[#888] mt-4 italic">So sánh các lỗ hổng hệ thống qua những đại án tiêu biểu</p>
         </motion.div>
