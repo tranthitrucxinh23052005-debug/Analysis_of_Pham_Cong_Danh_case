@@ -12,7 +12,7 @@ import MusicPlayer from './components/MusicPlayer'
 import VideoSection from './components/VideoSection'
 import CompareGobal from './components/CompareGobal'
 import FloatingTOC from './components/FloatingTOC'
-
+import FloatingIcons from './components/FloatingIcons'
 export default function App() {
   return (
     <div className="bg-[#F0FFDF] text-[#1a1a1a] font-sans min-h-screen overflow-hidden">
@@ -36,6 +36,7 @@ export default function App() {
   </div>
 
 </header>
+      <FloatingIcons />
       <FloatingTOC />
       <Hero />
       <VideoSection/>
