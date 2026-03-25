@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 // Danh sách các biểu tượng bạn muốn hiển thị
-const icons = ["🥐", "🍯", "🍰", "🥞", "🧈"];
+const icons = ["🥐", "🍯", "🍙", "💩", "🦴"];
 
 export default function FloatingIcons() {
   const [elements, setElements] = useState([]);
