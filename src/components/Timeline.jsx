@@ -25,13 +25,13 @@ const events = [
 
 export default function Timeline() {
   return (
-    <section className="py-20 px-8 bg-[#F6F0D7]/30">
+    <section className="py-20 px-8 bg-[#FAF4EB]">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#F075AE] mb-16 text-center drop-shadow-[0_0_5px_#FFAAB8]">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#3E2723] mb-16 text-center drop-shadow-[0_0_5px_#D4A373]">
           Hành Trình "Từ Biệt Thự Đến Nhà Giam"
         </h2>
 
-        <div className="relative border-l-4 border-[#FFAAB8] ml-4 md:ml-0 md:left-1/2">
+        <div className="relative border-l-4 border-[#D4A373] ml-4 md:ml-0 md:left-1/2">
           {events.map((event, index) => (
             <motion.div 
               key={index}
@@ -42,11 +42,11 @@ export default function Timeline() {
               className={`mb-12 relative w-full md:w-1/2 ${index % 2 === 0 ? 'md:left-[-50%] md:pr-12 text-right' : 'md:left-[0%] md:pl-12 text-left'} px-6`}
             >
               {/* Nút tròn trên dòng kẻ */}
-              <div className={`absolute top-0 w-6 h-6 bg-[#F075AE] rounded-full border-4 border-white shadow-lg ${index % 2 === 0 ? 'right-[-15px]' : 'left-[-15px]'}`}></div>
+              <div className={`absolute top-0 w-6 h-6 bg-[#8D6E63] rounded-full border-4 border-[#FAF4EB] shadow-lg ${index % 2 === 0 ? 'right-[-15px]' : 'left-[-15px]'}`}></div>
               
-              <div className="bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-[#AEDEFC] shadow-sm hover:shadow-md transition">
-                <span className="text-[#F075AE] font-black text-2xl">{event.year}</span>
-                <h3 className="text-xl font-bold text-[#1a1a1a] mt-2">{event.title}</h3>
+              <div className="bg-[#EAE0D5]/60 backdrop-blur-md p-6 rounded-2xl border border-[#D4A373]/50 shadow-sm hover:shadow-md transition">
+                <span className="text-[#8D6E63] font-black text-2xl">{event.year}</span>
+                <h3 className="text-xl font-bold text-[#3E2723] mt-2">{event.title}</h3>
                 <p className="text-[#555] mt-3 leading-relaxed">{event.desc}</p>
               </div>
             </motion.div>

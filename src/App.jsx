@@ -10,6 +10,8 @@ import GlobalLegal from './components/GlobalLegal'
 import Team from './components/Team'
 import MusicPlayer from './components/MusicPlayer'
 import VideoSection from './components/VideoSection'
+import CompareGobal from './components/CompareGobal'
+
 export default function App() {
   return (
     <div className="bg-[#F0FFDF] text-[#1a1a1a] font-sans min-h-screen overflow-hidden">
@@ -39,10 +41,11 @@ export default function App() {
       <Timeline /> 
       <Actions /> 
       <Analysis />
-      <RelatedCases/>
       <Compare />
       <Laws />
       <GlobalLegal/>
+      <CompareGobal/>
+      <RelatedCases/>
       <Team/>
       <MusicPlayer/>
     </div>

@@ -24,8 +24,8 @@ export default function MusicPlayer() {
         onClick={toggleMusic}
         className={`p-4 rounded-full shadow-2xl transition-all duration-300 border-2 ${
           isPlaying 
-            ? 'bg-[#F075AE] border-white text-white animate-bounce' // Khi đang phát nhạc
-            : 'bg-white border-[#F075AE] text-[#F075AE] hover:bg-gray-50' // Khi tắt nhạc
+            ? 'bg-[#8D6E63] border-[#FAF4EB] text-[#FAF4EB] animate-bounce' // Khi đang phát nhạc
+            : 'bg-[#FAF4EB] border-[#8D6E63] text-[#8D6E63] hover:bg-[#EAE0D5]' // Khi tắt nhạc
         }`}
         title="Bật/Tắt Nhạc Nền"
       >

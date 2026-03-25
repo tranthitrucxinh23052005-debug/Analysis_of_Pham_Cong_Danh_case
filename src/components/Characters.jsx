@@ -35,7 +35,7 @@ const characters = [
 
 export default function Characters() {
   return (
-    <section className="py-20 px-8 relative z-10">
+    <section className="py-20 px-8 relative z-10 bg-[#FAF4EB]">
       <div className="max-w-7xl mx-auto text-center">
         
         <motion.h2 
@@ -43,7 +43,7 @@ export default function Characters() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-4xl md:text-5xl font-bold text-[#F075AE] mb-4 drop-shadow-[0_0_6px_#FFAAB8]"
+          className="text-4xl md:text-5xl font-bold text-[#3E2723] mb-4 drop-shadow-[0_0_6px_#D4A373]"
         >
           NHỮNG BÀN TAY VÀNG TRONG BÓNG TỐI
         </motion.h2>
@@ -53,7 +53,7 @@ export default function Characters() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="text-[#555] mb-12 text-lg md:text-xl font-medium"
+          className="text-[#8D6E63] mb-12 text-lg md:text-xl font-medium"
         >
           Những mắt xích quyền lực trong các đại án tài chính ngân hàng
         </motion.p>
@@ -68,15 +68,15 @@ export default function Characters() {
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="bg-white/40 backdrop-blur-xl p-6 rounded-2xl border border-[#AEDEFC] shadow-[0_10px_30px_rgba(0,0,0,0.1)] hover:shadow-[0_0_25px_#FFAAB8] transition flex flex-col items-center text-center"
+              className="bg-[#EAE0D5]/60 backdrop-blur-xl p-6 rounded-2xl border border-[#D4A373]/50 shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_0_25px_#D4A373] transition flex flex-col items-center text-center"
             >
               <img 
                 src={char.img} 
                 alt={char.name} 
-                className="w-32 h-32 rounded-full mb-4 border-4 border-[#FFAAB8] hover:scale-110 transition duration-300 bg-white"
+                className="w-32 h-32 rounded-full mb-4 border-4 border-[#8D6E63] hover:scale-110 transition duration-300 bg-[#FAF4EB]"
               />
-              <h3 className="text-2xl font-bold text-[#F075AE] mb-2">{char.name}</h3>
-              <p className="font-bold text-[#1a1a1a] mb-3 px-3 py-1 bg-[#FFD8DF] rounded-full text-sm inline-block">{char.role}</p>
+              <h3 className="text-2xl font-bold text-[#3E2723] mb-2">{char.name}</h3>
+              <p className="font-bold text-[#3E2723] mb-3 px-3 py-1 bg-[#D4A373]/30 rounded-full text-sm inline-block">{char.role}</p>
               <p className="text-[#555] text-sm leading-relaxed">{char.desc}</p>
             </motion.div>
           ))}
