@@ -34,7 +34,7 @@ export default function Analysis() {
   ];
 
   return (
-    <section className="py-20 px-4 md:px-8 bg-[#FAF4EB]">
+    <section id="analysis" className="py-20 px-4 md:px-8 bg-[#FAF4EB]">
       <div className="max-w-7xl mx-auto">
         
         {/* Tiêu đề Section */}

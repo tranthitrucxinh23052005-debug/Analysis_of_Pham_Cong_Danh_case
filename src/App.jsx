@@ -11,6 +11,7 @@ import Team from './components/Team'
 import MusicPlayer from './components/MusicPlayer'
 import VideoSection from './components/VideoSection'
 import CompareGobal from './components/CompareGobal'
+import FloatingTOC from './components/FloatingTOC'
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
   </div>
 
 </header>
+      <FloatingTOC />
       <Hero />
       <VideoSection/>
       <Characters /> 

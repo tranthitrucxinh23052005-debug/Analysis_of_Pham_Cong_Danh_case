@@ -28,7 +28,7 @@ export default function Actions() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <section className="py-20 px-8 bg-[#FAF4EB]">
+    <section id= "actions" className="py-20 px-8 bg-[#FAF4EB]">
       <div className="max-w-4xl mx-auto">
         <motion.h2 
           initial={{ opacity: 0 }}

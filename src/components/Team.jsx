@@ -29,7 +29,7 @@ const members = [
 
 export default function Team() {
   return (
-    <section className="py-20 px-8 bg-[#FAF4EB] relative overflow-hidden">
+    <section id="team" className="py-20 px-8 bg-[#FAF4EB] relative overflow-hidden">
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#EAE0D5] rounded-full filter blur-3xl opacity-50 -z-10"></div>
       
       <div className="max-w-6xl mx-auto text-center">

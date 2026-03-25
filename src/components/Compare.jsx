@@ -81,7 +81,7 @@ const evolutionLaws = [
 
 export default function Compare() {
   return (
-    <section className="py-20 px-4 md:px-8 bg-gradient-to-b from-[#FAF4EB] to-[#EAE0D5]/80 backdrop-blur-sm">
+    <section id="newlaws" className="py-20 px-4 md:px-8 bg-gradient-to-b from-[#FAF4EB] to-[#EAE0D5]/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto space-y-28">
         
         {/* Bảng 1: So sánh hành vi sai phạm quá khứ */}

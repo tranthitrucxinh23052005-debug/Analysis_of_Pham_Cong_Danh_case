@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen p-8 text-center relative bg-[#FAF4EB]">
+    <section id="hero" className="flex flex-col items-center justify-center min-h-screen p-8 text-center relative bg-[#FAF4EB]">
       
       {/* Cục tròn tròn trang trí cho có vibe Cyber Pastel */}
       <div className="absolute top-20 left-20 w-32 h-32 bg-[#D4A373] rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>

@@ -35,7 +35,7 @@ const characters = [
 
 export default function Characters() {
   return (
-    <section className="py-20 px-8 relative z-10 bg-[#FAF4EB]">
+    <section id ="charac" className="py-20 px-8 relative z-10 bg-[#FAF4EB]">
       <div className="max-w-7xl mx-auto text-center">
         
         <motion.h2 

@@ -25,7 +25,7 @@ const events = [
 
 export default function Timeline() {
   return (
-    <section className="py-20 px-8 bg-[#FAF4EB]">
+    <section   id ="timeline" className="py-20 px-8 bg-[#FAF4EB]">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-[#3E2723] mb-16 text-center drop-shadow-[0_0_5px_#D4A373]">
           Hành Trình "Từ Biệt Thự Đến Nhà Giam"

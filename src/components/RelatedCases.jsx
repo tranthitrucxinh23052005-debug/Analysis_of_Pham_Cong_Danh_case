@@ -23,7 +23,7 @@ const cases = [
 
 export default function RelatedCases() {
   return (
-    <section className="py-20 px-4 md:px-8 bg-[#FAF4EB]">
+    <section id="relatecase" className="py-20 px-4 md:px-8 bg-[#FAF4EB]">
       <div className="max-w-6xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

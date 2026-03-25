@@ -35,7 +35,7 @@ const laws = [
 
 export default function Laws() {
   return (
-    <section className="py-20 px-8 overflow-hidden">
+    <section id="needlaws" className="py-20 px-8 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.h2 
           initial={{ opacity: 0, scale: 0.9 }}
